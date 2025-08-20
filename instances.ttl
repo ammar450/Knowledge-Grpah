@@ -1,0 +1,54 @@
+@prefix climate: <http://example.org/climate/ontology#> .
+@prefix data: <http://example.org/climate/data#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:Dataset_RR_ENS a climate:ClimateDataset ;
+    rdfs:label "Rainfall Ensemble Mean Dataset" ;
+    climate:hasVariable data:Var_Precipitation .
+
+data:Measurement_001 a climate:Measurement ;
+    climate:hasLatitude "35.375"^^xsd:float ;
+    climate:hasLongitude "5.625"^^xsd:float ;
+    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
+    climate:hasValue "9.600000381469727"^^xsd:float .
+
+data:Measurement_002 a climate:Measurement ;
+    climate:hasLatitude "45.375"^^xsd:float ;
+    climate:hasLongitude "5.625"^^xsd:float ;
+    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
+    climate:hasValue "0.0"^^xsd:float .
+
+data:Measurement_003 a climate:Measurement ;
+    climate:hasLatitude "45.375"^^xsd:float ;
+    climate:hasLongitude "28.625"^^xsd:float ;
+    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
+    climate:hasValue "0.0"^^xsd:float .
+
+data:Measurement_004 a climate:Measurement ;
+    climate:hasLatitude "55.375"^^xsd:float ;
+    climate:hasLongitude "28.625"^^xsd:float ;
+    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
+    climate:hasValue "0.0"^^xsd:float .
+
+data:Measurement_005 a climate:Measurement ;
+    climate:hasLatitude "65.375"^^xsd:float ;
+    climate:hasLongitude "-17.375"^^xsd:float ;
+    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
+    climate:hasValue "3.799999952316284"^^xsd:float .
+
+data:Measurement_006 a climate:Measurement ;
+    climate:hasLatitude "65.375"^^xsd:float ;
+    climate:hasLongitude "28.625"^^xsd:float ;
+    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
+    climate:hasValue "2.0"^^xsd:float .
+
+data:Var_Precipitation a climate:Variable ;
+    rdfs:label "Precipitation" ;
+    climate:hasMeasurement data:Measurement_001,
+        data:Measurement_002,
+        data:Measurement_003,
+        data:Measurement_004,
+        data:Measurement_005,
+        data:Measurement_006 .
+
