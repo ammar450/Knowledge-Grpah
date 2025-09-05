@@ -1,54 +1,349 @@
-@prefix climate: <http://example.org/climate/ontology#> .
-@prefix data: <http://example.org/climate/data#> .
+@prefix eobs: <https://w3id.org/eobs/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-data:Dataset_RR_ENS a climate:ClimateDataset ;
-    rdfs:label "Rainfall Ensemble Mean Dataset" ;
-    climate:hasVariable data:Var_Precipitation .
+eobs:lat a qb:DimensionProperty .
 
-data:Measurement_001 a climate:Measurement ;
-    climate:hasLatitude "35.375"^^xsd:float ;
-    climate:hasLongitude "5.625"^^xsd:float ;
-    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
-    climate:hasValue "9.600000381469727"^^xsd:float .
+eobs:lon a qb:DimensionProperty .
 
-data:Measurement_002 a climate:Measurement ;
-    climate:hasLatitude "45.375"^^xsd:float ;
-    climate:hasLongitude "5.625"^^xsd:float ;
-    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
-    climate:hasValue "0.0"^^xsd:float .
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__0_0__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_0_0> ;
+    sosa:hasSimpleResult 5.721558e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4e+01 ;
+    eobs:lon -1e+01 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
 
-data:Measurement_003 a climate:Measurement ;
-    climate:hasLatitude "45.375"^^xsd:float ;
-    climate:hasLongitude "28.625"^^xsd:float ;
-    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
-    climate:hasValue "0.0"^^xsd:float .
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__0_2__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_0_2> ;
+    sosa:hasSimpleResult 1.516862e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4e+01 ;
+    eobs:lon -6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
 
-data:Measurement_004 a climate:Measurement ;
-    climate:hasLatitude "55.375"^^xsd:float ;
-    climate:hasLongitude "28.625"^^xsd:float ;
-    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
-    climate:hasValue "0.0"^^xsd:float .
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__0_4__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_0_4> ;
+    sosa:hasSimpleResult 7.451732e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4e+01 ;
+    eobs:lon -2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
 
-data:Measurement_005 a climate:Measurement ;
-    climate:hasLatitude "65.375"^^xsd:float ;
-    climate:hasLongitude "-17.375"^^xsd:float ;
-    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
-    climate:hasValue "3.799999952316284"^^xsd:float .
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__0_6__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_0_6> ;
+    sosa:hasSimpleResult 3.064727e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4e+01 ;
+    eobs:lon 2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
 
-data:Measurement_006 a climate:Measurement ;
-    climate:hasLatitude "65.375"^^xsd:float ;
-    climate:hasLongitude "28.625"^^xsd:float ;
-    climate:hasTime "1950-01-01T00:00:00"^^xsd:dateTime ;
-    climate:hasValue "2.0"^^xsd:float .
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__0_8__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_0_8> ;
+    sosa:hasSimpleResult 7.421167e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4e+01 ;
+    eobs:lon 6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
 
-data:Var_Precipitation a climate:Variable ;
-    rdfs:label "Precipitation" ;
-    climate:hasMeasurement data:Measurement_001,
-        data:Measurement_002,
-        data:Measurement_003,
-        data:Measurement_004,
-        data:Measurement_005,
-        data:Measurement_006 .
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__2_0__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_2_0> ;
+    sosa:hasSimpleResult 5.702428e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.4e+01 ;
+    eobs:lon -1e+01 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__2_2__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_2_2> ;
+    sosa:hasSimpleResult 5.754451e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.4e+01 ;
+    eobs:lon -6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__2_4__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_2_4> ;
+    sosa:hasSimpleResult 1.313527e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.4e+01 ;
+    eobs:lon -2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__2_6__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_2_6> ;
+    sosa:hasSimpleResult 5.27005e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.4e+01 ;
+    eobs:lon 2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__2_8__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_2_8> ;
+    sosa:hasSimpleResult 3.497885e-01 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.4e+01 ;
+    eobs:lon 6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__4_0__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_4_0> ;
+    sosa:hasSimpleResult 2.930837e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.8e+01 ;
+    eobs:lon -1e+01 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__4_2__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_4_2> ;
+    sosa:hasSimpleResult 5.069676e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.8e+01 ;
+    eobs:lon -6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__4_4__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_4_4> ;
+    sosa:hasSimpleResult 4.122417e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.8e+01 ;
+    eobs:lon -2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__4_6__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_4_6> ;
+    sosa:hasSimpleResult 9.883739e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.8e+01 ;
+    eobs:lon 2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__4_8__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_4_8> ;
+    sosa:hasSimpleResult 2.808465e-01 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 4.8e+01 ;
+    eobs:lon 6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__6_0__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_6_0> ;
+    sosa:hasSimpleResult 2.526063e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.2e+01 ;
+    eobs:lon -1e+01 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__6_2__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_6_2> ;
+    sosa:hasSimpleResult 7.558959e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.2e+01 ;
+    eobs:lon -6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__6_4__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_6_4> ;
+    sosa:hasSimpleResult 9.353234e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.2e+01 ;
+    eobs:lon -2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__6_6__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_6_6> ;
+    sosa:hasSimpleResult 4.790771e-01 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.2e+01 ;
+    eobs:lon 2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__6_8__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_6_8> ;
+    sosa:hasSimpleResult 6.027074e-01 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.2e+01 ;
+    eobs:lon 6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__8_0__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_8_0> ;
+    sosa:hasSimpleResult 6.006167e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.6e+01 ;
+    eobs:lon -1e+01 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__8_2__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_8_2> ;
+    sosa:hasSimpleResult 6.977493e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.6e+01 ;
+    eobs:lon -6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__8_4__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_8_4> ;
+    sosa:hasSimpleResult 6.441695e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.6e+01 ;
+    eobs:lon -2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__8_6__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_8_6> ;
+    sosa:hasSimpleResult 7.693849e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.6e+01 ;
+    eobs:lon 2e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+<https://w3id.org/eobs/observation/eobs-core-precip-v31.0__rr__8_8__2023-01-01> a qb:Observation,
+        sosa:Observation ;
+    qb:dataSet <https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    sosa:hasFeatureOfInterest <https://w3id.org/eobs/cell/idx_8_8> ;
+    sosa:hasSimpleResult 2.314052e+00 ;
+    sosa:observedProperty <https://w3id.org/eobs/variable/rr> ;
+    sosa:resultTime [ a time:Instant ;
+            time:inXSDDateTime "2023-01-01T00:00:00"^^xsd:dateTime ] ;
+    eobs:lat 5.6e+01 ;
+    eobs:lon 6e+00 ;
+    eobs:timeDim "2023-01-01"^^xsd:date .
+
+eobs:timeDim a qb:DimensionProperty .
+
+<https://w3id.org/eobs/dataset/eobs-core-precip-v31.0> a qb:DataSet ;
+    rdfs:label "E-OBS daily precipitation v31.0" .
+
+<https://w3id.org/eobs/variable/rr> a qb:MeasureProperty ;
+    rdfs:label "precipitation_amount" ;
+    qudt:unit unit:MilliM-PER-DAY ;
+    skos:exactMatch <https://vocab.nerc.ac.uk/collection/P07/current/CFSN0330/> .
 
